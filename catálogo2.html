@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLOWY | Regalos con alma</title>
+
+<style>
+:root{
+  --rosa-bg:#fdecef;
+  --rosa:#f7c6d9;
+  --rosa-acento:#e88fb2;
+  --texto:#444;
+  --blanco:#fff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:'Poppins',Arial,sans-serif;
+  background:var(--rosa-bg);
+  color:var(--texto);
+  overflow-x:hidden;
+}
+
+/* ANIMACIONES */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* CORAZONES SUTILES */
+.corazon{
+  position:fixed;
+  bottom:-20px;
+  font-size:14px;
+  color:rgba(232,143,178,.35);
+  animation:flotar 14s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes flotar{
+  from{transform:translateY(0);opacity:0}
+  10%{opacity:.6}
+  to{transform:translateY(-120vh);opacity:0}
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,var(--rosa),var(--rosa-bg));
+  text-align:center;
+  padding:45px 20px;
+  border-radius:0 0 35px 35px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  animation:fadeUp 1s ease forwards;
+}
+
+header h1{font-size:34px}
+header p{margin-top:8px;font-size:14px}
+header span{display:block;font-size:13px;margin-top:5px}
+
+/* BOTONES REDES */
+.redes{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:18px;
+}
+
+.redes a{
+  padding:10px 16px;
+  border-radius:20px;
+  font-size:13px;
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+}
+
+.ig{background:linear-gradient(135deg,#fd1d1d,#c13584)}
+.wa{background:linear-gradient(135deg,#25d366,#1ebe5d)}
+
+/* SECCIONES */
+.seccion{padding:35px 20px 10px}
+.seccion h2{
+  font-size:22px;
+  margin-bottom:15px;
+  color:var(--rosa-acento);
+}
+
+/* CATÁLOGO */
+.catalogo{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+/* PRODUCTO */
+.producto{
+  background:var(--blanco);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 14px 35px rgba(0,0,0,.08);
+  opacity:0;
+  transform:translateY(20px);
+  transition:.4s;
+}
+
+.producto.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.producto:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:0 22px 45px rgba(0,0,0,.12);
+}
+
+.producto img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:.6s;
+}
+
+.producto:hover img{
+  transform:scale(1.06);
+}
+
+.info{padding:18px}
+.info h3{font-size:17px}
+.info p{font-size:13px;margin:7px 0;opacity:.85}
+.extra{font-size:12px;opacity:.8}
+
+/* BOTÓN WHATSAPP */
+.btn{
+  display:block;
+  margin-top:12px;
+  padding:12px;
+  text-align:center;
+  border-radius:14px;
+  color:white;
+  text-decoration:none;
+  background:linear-gradient(135deg,#25d366,#1ebe5d);
+  position:relative;
+  overflow:hidden;
+}
+
+.btn::after{
+  content:'';
+  position:absolute;
+  top:0;left:-100%;
+  width:100%;height:100%;
+  background:rgba(255,255,255,.25);
+  transition:.4s;
+}
+
+.btn:hover::after{left:100%}
+
+/* INFO FINAL */
+.info-box{
+  background:var(--blanco);
+  margin:30px 20px;
+  padding:20px;
+  border-radius:22px;
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  font-size:13px;
+}
+
+footer{text-align:center;padding:20px;font-size:12px;opacity:.7}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🩷 GLOWY 🩷</h1>
+  <p>Regalos con alma ✨</p>
+  <span>Cajitas · Ramos · Desayunos</span>
+  <span>📍 Paraguay | Ita</span>
+
+  <div class="redes">
+    <a class="ig" href="https://instagram.com/glowykiss.py" target="_blank">Instagram</a>
+    <a class="wa" href=https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗 target="_blank">WhatsApp</a>
+  </div>
+</header>
+
+<!-- CORAZONES -->
+<span class="corazon" style="left:10%">💗</span>
+<span class="corazon" style="left:40%;animation-delay:4s">💗</span>
+<span class="corazon" style="left:70%;animation-delay:8s">💗</span>
+
+<!-- CAJITAS -->
+<section class="seccion">
+<h2>🎁 Cajitas Glowy</h2>
+<div class="catalogo">
+
+<div class="producto">
+<img src="d4f317a95af0b382fde6dba5e7cd5651.jpg">
+<div class="info">
+<h3>Mini Glowy</h3>
+<p>Detalle simple, cute y delicado.</p>
+<p class="extra">Cajita o bolsita + tarjetita + 1 detalle</p>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗%20Quiero%20la%20cajita%20Mini%20Glowy">Pedir por WhatsApp</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="608713bfe547eca6305bc3b791e4d16a.jpg">
+<div class="info">
+<h3>Glowy Box</h3>
+<p>Nuestra box clásica.</p>
+<p class="extra">2–3 productos + decoración + tarjeta personalizada</p>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗%20Quiero%20la%20cajita%20Glowy%20Box">Pedir por WhatsApp</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="bfef9a63b3a2f95186341114ba0595b4.jpg">
+<div class="info">
+<h3>Glowy Sweet Box</h3>
+<p>La favorita para los amantes de lo dulce 🩷</p>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗%20Quiero%20la%20cajita%20Glowy%20Sweet%20Box">Pedir por WhatsApp</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="6826ac3b82320c3379ba0bd7a4b10427.jpg">
+<div class="info">
+<h3>Sweet Premium</h3>
+<p>Más dulces, más sorpresa 💖</p>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗%20Quiero%20la%20cajita%20Sweet%20Premium">Pedir por WhatsApp</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="82d62da0acd8261aacafb792e8eb9612.jpg">
+<div class="info">
+<h3>Glowy Special</h3>
+<p>Regalo completo para momentos importantes.</p>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗%20Quiero%20la%20cajita%20Glowy%20Special">Pedir por WhatsApp</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- RAMOS -->
+<section class="seccion">
+<h2>🌸 Ramos Glowy</h2>
+<div class="catalogo">
+
+<div class="producto">
+<img src="025d4ef3367e13ba9b90e413d57a9cd1.jpg">
+<div class="info">
+<h3>Mini Ramos – 2 flores</h3>
+<p class="extra">Extra flor grande / flor adicional disponible</p>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗%20Quiero%20el%20ramo%20de%20dos%20flores">Pedir por WhatsApp</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="2e69e04c0f13f754a87b90d223f3d380.jpg">
+<div class="info">
+<h3>Mini Ramos – 3 flores</h3>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗%20Quiero%20el%20ramo%20de%20tres%20flores">Pedir por WhatsApp</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="26511143721fb2429b3416e056e9f02b.jpg">
+<div class="info">
+<h3>Ramo Simple – 5 flores</h3>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗%20Quiero%20el%20ramo%20de%20cinco%20flores">Pedir por WhatsApp</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="409076a0cc98d5f84e607c8303e304e6.jpg">
+<div class="info">
+<h3>Ramo Mediano – 8 flores</h3>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗">Pedir por WhatsApp</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="f9d31c871acd904623d04b039e709a06.jpg">
+<div class="info">
+<h3>Ramo Premium – 12 flores</h3>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗%20Quiero%20el%20ramo%20de%20doce%20flores">Pedir por WhatsApp</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- DESAYUNOS -->
+<section class="seccion">
+<h2>☕ Desayunos Glowy</h2>
+<div class="catalogo">
+
+<div class="producto">
+<img src="edc862b585b375f11d7a555fb63acc11.jpg">
+<div class="info">
+<h3>Desayuno Simple</h3>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗20Quiero%20el%20Desayuno%20Simple">Pedir por WhatsApp</a>
+</div>
+</div>
+
+<div class="producto">
+<img src="10ae99c8ba90a35bfb3240832262e7b4.jpg">
+<div class="info">
+<h3>Desayuno Premium</h3>
+<a class="btn" href="https://api.whatsapp.com/send?phone=595985260728&text=Hola,%20quiero%20hacer%20un%20pedido%20en%20GLOWY💗20Quiero%20el%20Desayuno%20Premium">Pedir por WhatsApp</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<div class="info-box">
+<p>¡Atención!</p>
+<p>• Todo se arma a pedido</p>
+<p>• Productos sujetos a stock</p>
+<p>• Imágenes de referencia</p>
+<p>• Pedidos con anticipación</p>
+</div>
+
+<footer>
+© 2026 · GLOWY · Hecho con amor 💕
+</footer>
+
+<script>
+const productos=document.querySelectorAll('.producto');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+},{threshold:0.2});
+productos.forEach(p=>observer.observe(p));
+</script>
+
+</body>
+</html>
