@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Glowy Valentine’s Collection</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Tipografías -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --rosa:#f5c6d6;
+  --rosa-suave:#fff3f7;
+  --texto:#3d2a32;
+}
+
+body{
+  margin:0;
+  font-family:'Poppins', sans-serif;
+  background:var(--rosa-suave);
+  color:var(--texto);
+}
+
+header{
+  text-align:center;
+  padding:60px 20px 40px;
+  background:white;
+}
+
+header h1{
+  font-family:'Playfair Display', serif;
+  font-size:2.4em;
+  margin:0;
+}
+
+header p{
+  margin-top:8px;
+  font-weight:300;
+}
+
+.countdown{
+  margin-top:18px;
+  font-size:0.9em;
+  color:#a05;
+}
+
+section{
+  max-width:900px;
+  margin:auto;
+  padding:40px 16px;
+}
+
+.product{
+  background:white;
+  border-radius:20px;
+  padding:22px;
+  margin-bottom:32px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp 0.8s ease forwards;
+}
+
+.product:nth-child(2){animation-delay:.1s}
+.product:nth-child(3){animation-delay:.2s}
+.product:nth-child(4){animation-delay:.3s}
+.product:nth-child(5){animation-delay:.4s}
+
+.product h2{
+  font-family:'Playfair Display', serif;
+  margin:12px 0 6px;
+}
+
+.image-box{
+  width:100%;
+  height:200px;
+  background:#f8e1ea;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#b58;
+  font-size:0.85em;
+}
+
+.ref{
+  font-size:0.7em;
+  color:#999;
+  margin-top:6px;
+}
+
+.order-btn{
+  display:inline-block;
+  margin-top:14px;
+  padding:11px 22px;
+  border-radius:25px;
+  background:#222;
+  color:white;
+  text-decoration:none;
+  font-size:0.85em;
+  transition:background .3s;
+}
+
+.order-btn:hover{
+  background:#444;
+}
+
+footer{
+  background:white;
+  text-align:center;
+  padding:28px 16px;
+  font-size:0.75em;
+  color:#777;
+}
+
+@keyframes fadeUp{
+  to{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Glowy Valentine’s Collection</h1>
+  <p>Regalos con alma para enamorar</p>
+  <div class="countdown" id="countdown"></div>
+</header>
+
+<section>
+
+<div class="product">
+  <div class="image-box">Foto LOVE MINI</div>
+  <div class="ref">Imagen de referencia</div>
+  <h2>LOVE MINI</h2>
+  <p>Detalle pequeño y delicado para expresar amor.</p>
+  <a class="order-btn" href="https://wa.me/595985260728?text=Hola%20Glowy%20💖%20Quiero%20pedir%20el%20LOVE%20MINI" target="_blank">Pedir por WhatsApp</a>
+</div>
+
+<div class="product">
+  <div class="image-box">Foto SWEET LOVE BOX</div>
+  <div class="ref">Imagen de referencia</div>
+  <h2>SWEET LOVE BOX</h2>
+  <p>Una box dulce y romántica para sorprender.</p>
+  <a class="order-btn" href="https://wa.me/595985260728?text=Hola%20Glowy%20💖%20Quiero%20pedir%20la%20SWEET%20LOVE%20BOX" target="_blank">Pedir por WhatsApp</a>
+</div>
+
+<div class="product">
+  <div class="image-box">Foto RAMO LOVE</div>
+  <div class="ref">Imagen de referencia</div>
+  <h2>RAMO LOVE</h2>
+  <p>Flores envueltas con estilo y amor.</p>
+  <a class="order-btn" href="https://wa.me/595985260728?text=Hola%20Glowy%20💖%20Quiero%20pedir%20el%20RAMO%20LOVE" target="_blank">Pedir por WhatsApp</a>
+</div>
+
+<div class="product">
+  <div class="image-box">Foto LOVE PREMIUM</div>
+  <div class="ref">Imagen de referencia</div>
+  <h2>LOVE PREMIUM</h2>
+  <p>El regalo completo para un momento inolvidable.</p>
+  <a class="order-btn" href="https://wa.me/595985260728?text=Hola%20Glowy%20💖%20Quiero%20pedir%20el%20LOVE%20PREMIUM" target="_blank">Pedir por WhatsApp</a>
+</div>
+
+<div class="product">
+  <div class="image-box">Foto DESAYUNO LOVE</div>
+  <div class="ref">Imagen de referencia</div>
+  <h2>DESAYUNO LOVE</h2>
+  <p>Un inicio de día pensado con amor.</p>
+  <a class="order-btn" href="https://wa.me/595985260728?text=Hola%20Glowy%20💖%20Quiero%20pedir%20el%20DESAYUNO%20LOVE" target="_blank">Pedir por WhatsApp</a>
+</div>
+
+</section>
+
+<footer>
+📍 Ita – Paraguay · Todo se arma a pedido  
+<br>© Glowy · Catálogo creado por Glowy
+</footer>
+
+<script>
+const endDate = new Date("Feb 14, 2026 23:59:59").getTime();
+setInterval(()=>{
+  const now=new Date().getTime();
+  const d=endDate-now;
+  if(d<0){
+    document.getElementById("countdown").innerText="Edición finalizada";
+    return;
+  }
+  document.getElementById("countdown").innerText=
+  "Edición limitada · "+Math.floor(d/(1000*60*60*24))+" días";
+},1000);
+</script>
+
+</body>
+</html>
